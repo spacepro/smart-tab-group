@@ -1,0 +1,159 @@
+:root {
+  color-scheme: light;
+  --bg: #f3efe6;
+  --panel: rgba(255, 252, 246, 0.92);
+  --ink: #1d1a16;
+  --muted: #6d6459;
+  --border: rgba(29, 26, 22, 0.1);
+  --accent: #1f6feb;
+  --accent-strong: #0f4bb5;
+  --danger: #b8412e;
+  --shadow: 0 18px 44px rgba(64, 44, 17, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  font-family: Georgia, "Iowan Old Style", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(31, 111, 235, 0.12), transparent 34%),
+    linear-gradient(160deg, #f7f1e7 0%, #efe4d3 100%);
+}
+
+.popup {
+  padding: 16px;
+}
+
+.hero {
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent-strong);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.subcopy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.panel {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stats .label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.stats strong {
+  font-size: 24px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+button {
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: var(--accent-strong);
+}
+
+button.secondary {
+  background: #ddd2bf;
+  color: var(--ink);
+}
+
+button.secondary:hover {
+  background: #d1c3ac;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.full {
+  width: 100%;
+}
+
+.toggle,
+.field {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.toggle input {
+  margin-top: 3px;
+}
+
+.field {
+  flex-direction: column;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  resize: vertical;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.status {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Tab Group",
+  "version": "0.1.0",
+  "description": "Automatically groups related browser tabs, removes duplicates, and focuses existing tabs.",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Smart Tab Group"
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Tab Group</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <p class="eyebrow">Smart Tab Group</p>
+        <h1>Clean up the current workspace.</h1>
+        <p class="subcopy">Detect duplicates, focus existing tabs, and apply safe grouping plans.</p>
+      </header>
+
+      <section class="panel stats">
+        <div>
+          <span class="label">Total Tabs</span>
+          <strong id="totalTabs">0</strong>
+        </div>
+        <div>
+          <span class="label">Duplicates</span>
+          <strong id="duplicateCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Suggested Groups</span>
+          <strong id="suggestedGroups">0</strong>
+        </div>
+        <div>
+          <span class="label">Current Groups</span>
+          <strong id="currentGroups">0</strong>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Actions</h2>
+        <div class="actions">
+          <button id="scanTabs">Scan Tabs</button>
+          <button id="applyGrouping">Apply Grouping</button>
+          <button id="closeDuplicates" class="danger">Close Duplicates</button>
+          <button id="ungroupAll" class="secondary">Ungroup All</button>
+        </div>
+        <p id="actionStatus" class="status">Ready.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Settings</h2>
+        <label class="toggle">
+          <input id="autoFocusDuplicates" type="checkbox" />
+          <span>Auto focus duplicates</span>
+        </label>
+        <label class="toggle">
+          <input id="autoCloseNewDuplicate" type="checkbox" />
+          <span>Auto close newly opened duplicate</span>
+        </label>
+        <label class="toggle">
+          <input id="autoGrouping" type="checkbox" />
+          <span>Auto grouping</span>
+        </label>
+        <label class="toggle">
+          <input id="dryRunMode" type="checkbox" />
+          <span>Dry-run mode</span>
+        </label>
+        <label class="field">
+          <span>Ignored domains</span>
+          <textarea id="ignoredDomains" rows="3" placeholder="example.com&#10;internal.example.org"></textarea>
+        </label>
+        <button id="saveSettings" class="secondary full">Save Settings</button>
+      </section>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
